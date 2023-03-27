@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {
-	BsFillMoonFill,
-	BsGithub,
-	BsLinkedin,
-	BsFillSunFill,
-} from "react-icons/bs";
 import { HiMenu, HiX, HiSun, HiMoon } from "react-icons/hi";
+import "./navbar.scss";
 
 function Navbar({ theme, setTheme }) {
 	const [isopen, setIsopen] = useState(false);

@@ -1,0 +1,150 @@
+@import '../../styles/index';
+
+.work {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    // justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        text-align: center;
+        color: $accent-dark;
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $accent-dark ;
+            left: 0;
+            bottom: 0;
+            border-radius: 1rem;
+        }
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem auto;
+        gap: 2rem;
+
+        .item {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+
+            a {
+                width: 80%;
+                border-radius: 1rem;
+
+                &:hover img {
+                    box-shadow: 0 0 1rem #ddd;
+                }
+
+                img {
+                    border-radius: 1rem;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .description {
+                h2 {
+                    margin-bottom: 1rem;
+                }
+
+                ul {
+                    list-style-type: none;
+                    display: flex;
+                    align-items: center;
+                    gap: .75rem;
+                }
+
+                .btns {
+                    display: flex;
+                    gap: 1rem;
+
+                    button {
+                        padding: .35rem .75rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 1rem;
+                        outline: none;
+                        border: 2px solid $accent-dark;
+                        background-color: transparent;
+                        color: $accent-dark;
+                        border-radius: .5rem;
+                        font-weight: 500;
+
+                        &:hover {
+                            opacity: .8;
+                        }
+
+                    }
+
+                    button:first-child {
+                        color: $primary-dark;
+                        background-color: $accent-dark;
+
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (786px<width<1080px) {
+
+    .projects {
+
+        .item {
+            width: 85%;
+
+            a {
+                width: 60%;
+            }
+
+            .description {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (width>=1080px) {
+    .work {
+
+        .projects {
+            .item {
+                width: 75%;
+                flex-direction: row;
+
+                a {
+                    width: 40%;
+                }
+
+                .description {
+                    width: 50%;
+                }
+            }
+
+            .item:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}

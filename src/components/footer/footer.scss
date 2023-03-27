@@ -1,0 +1,61 @@
+@import '../../styles/index';
+
+footer {
+    padding-top: 3rem;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    // bottom: 0;
+    background-color: $accent-dark;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+
+    .social-links {
+        margin: 1rem auto;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            li {
+                @include transition;
+                display: grid;
+                place-items: center;
+
+                a {
+                    color: $secondary-dark;
+                }
+
+                &:hover {
+                    color: $accent-dark;
+                    transform: translateY(-10px);
+                }
+            }
+        }
+
+    }
+
+    .divider {
+        background-color: $bg-dark;
+        height: 0.1rem;
+        width: 85%;
+        margin: auto;
+        border-radius: 2rem;
+    }
+
+    p {
+        margin-top: 1rem;
+
+        span {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: $bg-dark;
+        }
+    }
+}

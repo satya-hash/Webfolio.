@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
+import "./footer.scss";
 
 function Footer() {
-	const [inp, setInp] = useState("");
-	function handleSubmit(e) {
-		e.preventDefault();
-		console.log(inp);
-	}
 	return (
 		<footer>
 			<div className="social-links">
@@ -30,18 +26,6 @@ function Footer() {
 						</a>
 					</li>
 				</ul>
-				<form onSubmit={handleSubmit}>
-					{" "}
-					<input
-						placeholder="Enter Email..."
-						type="email"
-						name="email"
-						id="email"
-						value={inp}
-						onChange={(e) => setInp(e.target.value)}
-					/>{" "}
-					<button type="submit"> Send </button>{" "}
-				</form>
 			</div>
 			<div className="divider" />
 			<p>
