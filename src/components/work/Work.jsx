@@ -233,11 +233,10 @@ function Work() {
 		<div className="work">
 			<h3> Work </h3>
 			<div className="projects">
-				{projects.map((project) => {
+				{projects.map((project, i) => {
 					let { name, svgs, description, links, image } = project;
-					let pic = `../../assets/${image}`;
 					return (
-						<div className="item">
+						<div key={i} className="item">
 							<a href={links[0]}>
 								{" "}
 								<img src={image} alt="p1" />{" "}

@@ -255,8 +255,8 @@ function Skills() {
 			<h3> Skills </h3>
 			<div className="skills-icons">
 				<ul>
-					{skills.map((skill) => (
-						<li>{skill}</li>
+					{skills.map((skill, i) => (
+						<li key={i}>{skill}</li>
 					))}
 				</ul>
 			</div>

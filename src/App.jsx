@@ -9,6 +9,7 @@ import { useState } from "react";
 
 function App() {
 	const [theme, setTheme] = useState("light");
+
 	return (
 		<div className={`App ${theme}`}>
 			<Navbar id="navbar" theme={theme} setTheme={setTheme} />
@@ -16,7 +17,7 @@ function App() {
 			<About id="about" />
 			<Skills id="skills" />
 			<Work id="work" />
-			{/* <Contact id="contact" /> */}
+			<Contact id="contact" />
 			<Footer id="footer" />
 		</div>
 	);
