@@ -40,11 +40,38 @@
             gap: 1.5rem;
 
             li {
-                flex: 1 1 100px;
+                width: 100px;
+                height: 100px;
+                display: grid;
+                place-items: center;
+                position: relative;
+                @include transition;
 
-                .icon {
-                    height: 48px;
-                    width: 48px;
+                &::after {
+                    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $accent-dark;
+                    opacity: .1;
+                    left: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    transform: translateZ(90deg);
+                }
+
+                &:hover,
+                &:hover img {
+
+                    transform: scale(1.25);
+                }
+
+                img {
+                    @include transition;
+                    // width: 100%;
+                    object-fit: contain;
+                    object-position: center;
                 }
 
             }
@@ -52,19 +79,21 @@
     }
 }
 
-@media screen and (786px<width<1080px) {
+@media screen and (786px<=width<1080px) {
 
     .skills-icons {
-        width: 75%;
+        width: 70%;
 
-        li {
-            flex: 1 1 120px;
+        ul {
 
-            .icon {
-                height: 96px;
-                width: 96px;
+            gap: 2.5rem;
 
+            li {
+                flex: 1 0 calc(100%/5);
             }
+
+
+
         }
     }
 }
@@ -73,14 +102,13 @@
     .skills-icons {
         width: 65%;
 
-        li {
-            flex: 1 1 180px;
+        ul {
 
-            .icon {
-                height: 96px;
-                width: 96px;
+            gap: 3rem;
 
-            }
+
+
+
         }
     }
 }

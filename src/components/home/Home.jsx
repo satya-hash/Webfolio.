@@ -1,7 +1,8 @@
 import React from "react";
 import dp from "../../assets/satya.jpg";
+import linkedinSvg from "../../assets/svgs/linkedin.svg";
+import githubSvg from "../../assets/svgs/github.svg";
 import "./home.scss";
-import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Home() {
 	return (
@@ -24,13 +25,13 @@ function Home() {
 								href="https://www.linkedin.com/in/satya-surendra/"
 							>
 								{" "}
-								<FaLinkedin size={36} />{" "}
+								<img src={linkedinSvg} alt="" />
 							</a>
 						</li>
 						<li>
 							<a target="_blank" href="https://www.github.com/satya-hash/">
 								{" "}
-								<FaGithub size={36} />{" "}
+								<img src={githubSvg} alt="" />
 							</a>
 						</li>
 					</ul>

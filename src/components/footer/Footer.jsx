@@ -1,4 +1,8 @@
 import React from "react";
+import linkedinSvg from "../../assets/svgs/linkedin.svg";
+import githubSvg from "../../assets/svgs/github.svg";
+import facebookSvg from "../../assets/svgs/facebook.svg";
+
 import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
 import "./footer.scss";
 
@@ -8,21 +12,21 @@ function Footer() {
 			<div className="social-links">
 				<ul>
 					<li>
-						<a href="">
+						<a href="https://linkedin.com/in/satya-surendra" target="_blank">
 							{" "}
-							<FaLinkedin size={32} />{" "}
+							<img src={linkedinSvg} alt="" />
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/satya-hash" target="_blank">
+							{" "}
+							<img src={githubSvg} alt="" />
 						</a>
 					</li>
 					<li>
 						<a href="">
 							{" "}
-							<FaGithub size={32} />{" "}
-						</a>
-					</li>
-					<li>
-						<a href="">
-							{" "}
-							<FaFacebookSquare size={32} />{" "}
+							<img src={facebookSvg} alt="" />
 						</a>
 					</li>
 				</ul>

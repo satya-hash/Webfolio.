@@ -14,9 +14,9 @@ function App() {
 		<div className={`App ${theme}`}>
 			<Navbar id="navbar" theme={theme} setTheme={setTheme} />
 			<Home id="home" />
-			<About id="about" />
 			<Skills id="skills" />
 			<Work id="work" />
+			<About id="about" />
 			<Contact id="contact" />
 			<Footer id="footer" />
 		</div>

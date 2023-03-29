@@ -244,8 +244,8 @@ function Work() {
 							<div className="description">
 								<h2>{name}:</h2>
 								<ul>
-									{svgs.map((svg, index) => (
-										<li>{svg}</li>
+									{svgs.map((svg, i) => (
+										<li key={i}>{svg}</li>
 									))}
 								</ul>
 								<p>{description}</p>

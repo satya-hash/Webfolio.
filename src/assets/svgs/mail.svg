@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" id="mail">
+    <g fill="#fff" transform="translate(5 -1031.362)">
+        <circle cx="8" cy="1044.362" r="13" fill="#239fdb"></circle>
+        <path
+            style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"
+            d="m.621 3-.012.016H.527a.5.5 0 0 0-.5.5v.232L0 3.783l.027.022V12.5a.5.5 0 0 0 .5.5h14.97a.5.5 0 0 0 .501-.5V3.809L16 3.807l-.002-.002v-.29a.5.5 0 0 0-.502-.5H.641L.62 3Zm1.281 1.016H14.13l-6.11 4.847-6.117-4.847Zm-.877.582 6.686 5.297a.5.5 0 0 0 .62 0l6.665-5.293V12H1.026V4.598z"
+            color="#000" font-family="sans-serif" font-weight="400" overflow="visible"
+            transform="translate(0 1036.362)"></path>
+    </g>
+</svg>
