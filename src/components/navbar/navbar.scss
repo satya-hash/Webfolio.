@@ -22,6 +22,7 @@ nav {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: spin 3s linear infinite;
+
             @keyframes spin {
                 0% {
                     background: #b3ffab;
@@ -29,15 +30,15 @@ nav {
                     background: linear-gradient(57deg, #b3ffab 0%, #12fff7 100%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-        
+
                 }
 
                 25% {
                     background: #b3ffab;
                     background: -webkit-linear-gradient(70deg, #b3ffab 0%, #12fff7 100%);
                     background: linear-gradient(70deg, #b3ffab 0%, #12fff7 100%);
-                                -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
 
                 }
 
@@ -45,8 +46,8 @@ nav {
                     background: #b3ffab;
                     background: -webkit-linear-gradient(183deg, #b3ffab 0%, #12fff7 100%);
                     background: linear-gradient(183deg, #b3ffab 0%, #12fff7 100%);
-                                -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
 
                 }
 
@@ -54,8 +55,8 @@ nav {
                     background: #b3ffab;
                     background: -webkit-linear-gradient(287deg, #b3ffab 0%, #12fff7 100%);
                     background: linear-gradient(287deg, #b3ffab 0%, #12fff7 100%);
-                                -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
 
                 }
 
@@ -63,8 +64,8 @@ nav {
                     background: #b3ffab;
                     background: -webkit-linear-gradient(360deg, #b3ffab 0%, #12fff7 100%);
                     background: linear-gradient(360deg, #b3ffab 0%, #12fff7 100%);
-                                -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
 
                 }
             }
@@ -102,6 +103,7 @@ nav {
                 display: inline-block;
                 cursor: pointer;
                 overflow: hidden;
+                color: $primary-dark;
                 @include transition;
 
                 &::after {

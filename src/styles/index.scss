@@ -2,68 +2,70 @@
 
 // light color pallete
 
-$primary-light:#ffcaca;
-$secondary-light:#372948;
-$bg-light:#ffecef;
-$accent-light:#251b37;
+$primary-light: #ffcaca;
+$secondary-light: #372948;
+$bg-light: #ffecef;
+$accent-light: #251b37;
 
 // dark pallete
 
-$primary-dark:#f2faff;
-$secondary-dark:#f1f1e6;
-$bg-dark:#364F6B;
-$accent-dark:#0098fa;
+$primary-dark: #f2faff;
+$secondary-dark: #f1f1e6;
+$bg-dark: #364F6B;
+$accent-dark: #0098fa;
 
-@mixin transition{
+@mixin transition {
   transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-// // $light-bg:#F2FAFF;
-// // $dark-bg:#364F6B;
-// // $light-text:#364F6B;
-// // $dark-text:#F2FAFF;
-// // $accent:#0098FA;
-// // $heading:#F1F1E6;
+.light {
 
-// @mixin theme-colorss($theme:light){
-//   @if $theme == light{
-//     $primary:$primary-light;
-//     $secondary:$secondary-light;
-//     $bg:$bg-light;
-//     $accent:$accent-light
-//   }@else {
-    
-//     $primary:$primary-dark;
-//     $secondary:$secondary-dark;
-//     $bg:$bg-dark;
-//     $accent:$accent-dark
-//   }
-// }
-
-
-
-*,::after,::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  background: $bg-light;
+  color: $secondary-light;
 }
 
-html {font-size: 100%;} /*16px*/
+
+.dark {
+
+  background: $bg-dark;
+  color: $secondary-dark;
+}
+
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+/*16px*/
 
 body {
 
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  background: $bg-dark;
-  color: $secondary-dark;
- 
+  // background: $bg-dark;
+  // color: $secondary-dark;
+
 }
 
-p {margin-bottom: 1rem;}
+p {
+  margin-bottom: 1rem;
+}
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.3;
@@ -74,45 +76,73 @@ h1 {
   font-size: 3.052rem;
 }
 
-h2 {font-size: 2.441rem;}
+h2 {
+  font-size: 2.441rem;
+}
 
-h3 {font-size: 1.953rem;}
+h3 {
+  font-size: 1.953rem;
+}
 
-h4 {font-size: 1.563rem;}
+h4 {
+  font-size: 1.563rem;
+}
 
-h5 {font-size: 1.25rem;}
+h5 {
+  font-size: 1.25rem;
+}
 
-small, .text_small {font-size: 0.8rem;}
+small,
+.text_small {
+  font-size: 0.8rem;
+}
 
 @media screen and (width<600px) {
-    html {font-size: 75%;} /*12px*/
+  html {
+    font-size: 75%;
+  }
 
-    body {
+  /*12px*/
+
+  body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 1.75;
-    }
+  }
 
-    p {margin-bottom: 1rem;}
+  p {
+    margin-bottom: 1rem;
+  }
 
-    h1, h2, h3, h4, h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 1.3;
-    }
+  }
 
-    h1 {
+  h1 {
     margin-top: 0;
     font-size: 3.052rem;
-    }
+  }
 
-    h2 {font-size: 2.441rem;}
+  h2 {
+    font-size: 2.441rem;
+  }
 
-    h3 {font-size: 1.953rem;}
+  h3 {
+    font-size: 1.953rem;
+  }
 
-    h4 {font-size: 1.563rem;}
+  h4 {
+    font-size: 1.563rem;
+  }
 
-    h5 {font-size: 1.25rem;}
+  h5 {
+    font-size: 1.25rem;
+  }
 
 }
-
