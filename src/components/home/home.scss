@@ -1,7 +1,7 @@
 @import '../../styles/index.scss';
 
 .home {
-    min-height: 85vh;
+    min-height: 100vh;
     margin-top: 3rem;
     padding: 1rem;
     width: 100%;
@@ -27,7 +27,7 @@
             li {
                 @include transition;
 
-                a {
+                .icon {
                     color: $secondary-dark;
                 }
 
@@ -107,7 +107,6 @@
 
 
         img {
-            // width: 100%;
             width: 350px;
             height: 350px;
             object-fit: cover;

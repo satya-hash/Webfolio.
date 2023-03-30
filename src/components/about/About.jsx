@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import dp from "../../assets/satya.jpg";
+import sr from "../ScrollReveal";
 import "./about.scss";
 
 function About() {
+	useEffect(() => {
+		sr.reveal(".image", { delay: "100", origin: "left" });
+		sr.reveal(".details", { delay: "150", origin: "right" });
+		// sr.reveal(".dp", { delay: "100" });
+	}, []);
 	return (
 		<div className="about">
 			<h3> About </h3>
 			<div className="intro">
 				<div className="dp">
-					<img src={dp} alt="dp" />
+					<img className="image" src={dp} alt="dp" />
 				</div>
 				<div className="details">
 					<h2>

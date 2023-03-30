@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./work.scss";
 import shoemineImg from "../../assets/shoemine.png";
 import smsImg from "../../assets/sms.png";
 import onestopImg from "../../assets/1stop.png";
 import { VscOpenPreview } from "react-icons/vsc";
 import { BsCodeSlash } from "react-icons/bs";
+import sr from "../ScrollReveal";
 
 function Work() {
 	function __html(htmlString) {
@@ -229,6 +230,11 @@ function Work() {
 		},
 	];
 
+	useEffect(() => {
+		sr.reveal(".image", { delay: "100", origin: "top" });
+		sr.reveal(".description", { delay: "200", origin: "bottom" });
+	}, []);
+
 	return (
 		<div className="work">
 			<h3> Work </h3>
@@ -239,7 +245,7 @@ function Work() {
 						<div key={i} className="item">
 							<a href={links[0]}>
 								{" "}
-								<img src={image} alt="p1" />{" "}
+								<img className="image" src={image} alt="p1" />{" "}
 							</a>
 							<div className="description">
 								<h2>{name}:</h2>

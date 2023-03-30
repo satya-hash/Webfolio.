@@ -1,8 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import phoneSvg from "../../assets/svgs/phone.svg";
 import mailSvg from "../../assets/svgs/mail.svg";
 import whatsappSvg from "../../assets/svgs/whatsapp.svg";
 import emailjs from "@emailjs/browser";
+import sr from "../ScrollReveal";
+
 import "./contact.scss";
 
 function Contact() {
@@ -37,7 +39,10 @@ function Contact() {
 		let { name, value } = e.target;
 		setMail((prev) => ({ ...prev, [name]: value }));
 	}
-
+	useEffect(() => {
+		sr.reveal(".touch", { delay: "100" });
+		sr.reveal(".form", { delay: "250" });
+	}, []);
 	return (
 		<div className="contact">
 			<h3> Contact </h3>
@@ -71,7 +76,7 @@ function Contact() {
 						</ul>
 					</div>
 				</div>
-				<form ref={formRef} onSubmit={handleSubmit}>
+				<form className="form" ref={formRef} onSubmit={handleSubmit}>
 					<input
 						onChange={handleChange}
 						type="text"

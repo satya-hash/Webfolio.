@@ -4,12 +4,38 @@ import "./navbar.scss";
 
 function Navbar({ theme, setTheme }) {
 	const [isopen, setIsopen] = useState(false);
+	// const [navshow, setNavshow] = useState(false)
 	function handleOpen() {
 		setIsopen(!isopen);
 		document.querySelector(".nav-keys").classList.toggle("show");
 	}
+
+	function handleScroll(e) {
+		let value = e.target.getAttribute("value");
+		let ele = document.querySelector(`.${value}`);
+		handleOpen();
+		ele.scrollIntoView({ behavior: "smooth", block: "start" });
+	}
+
+	function stickyNav() {
+		let nav = document.querySelector("nav");
+		if (window.scrollY > 100) {
+			// nav.style.position = "fixed";
+			// console.log( `the sticky nav` );
+			nav.classList.add("sticky-nav");
+		} else {
+			// nav.style.position = "block";
+			// console.log( `block nav` );
+			nav.classList.remove("sticky-nav");
+		}
+	}
+
+	useEffect(() => {
+		window.addEventListener("scroll", stickyNav);
+	}, []);
+
 	return (
-		<nav>
+		<nav className="sticky-nav">
 			<div className="navbar">
 				<div className="logo">
 					<h4 className="">webfolio.</h4>
@@ -22,19 +48,29 @@ function Navbar({ theme, setTheme }) {
 				{" "}
 				<ul className="">
 					<li>
-						<a>Home</a>
+						<a onClick={handleScroll} value="home">
+							Home
+						</a>
 					</li>
 					<li>
-						<a>About</a>
+						<a onClick={handleScroll} value="about">
+							About
+						</a>
 					</li>
 					<li>
-						<a>Skills</a>
+						<a onClick={handleScroll} value="skills">
+							Skills
+						</a>
 					</li>
 					<li>
-						<a>Work</a>
+						<a onClick={handleScroll} value="work">
+							Work
+						</a>
 					</li>
 					<li>
-						<a>Contact</a>
+						<a onClick={handleScroll} value="contact">
+							Contact
+						</a>
 					</li>
 				</ul>{" "}
 				<button

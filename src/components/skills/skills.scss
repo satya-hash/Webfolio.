@@ -2,7 +2,7 @@
 
 .skills {
     margin: 2rem 0;
-    min-height: 70vh;
+    min-height: 100vh;
     display: flex;
     gap: 2.5rem;
     flex-direction: column;
@@ -71,7 +71,7 @@
                     @include transition;
                     // width: 100%;
                     object-fit: contain;
-                    object-position: center;
+                    // object-position: center;
                 }
 
             }
