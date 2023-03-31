@@ -18,12 +18,7 @@ function Contact() {
 	function handleSubmit(e) {
 		e.preventDefault();
 		emailjs
-			.sendForm(
-				"service_eql1w98",
-				"template_e8pd39a",
-				formRef.current,
-				"shArcUAVQ6avTrywq"
-			)
+			.sendForm("sercice_id", "template_id", formRef.current, "public_key")
 			.then(
 				(result) => {
 					console.log(result.text);

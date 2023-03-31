@@ -4,7 +4,6 @@ import "./navbar.scss";
 
 function Navbar({ theme, setTheme }) {
 	const [isopen, setIsopen] = useState(false);
-	// const [navshow, setNavshow] = useState(false)
 	function handleOpen() {
 		setIsopen(!isopen);
 		document.querySelector(".nav-keys").classList.toggle("show");
@@ -20,12 +19,8 @@ function Navbar({ theme, setTheme }) {
 	function stickyNav() {
 		let nav = document.querySelector("nav");
 		if (window.scrollY > 100) {
-			// nav.style.position = "fixed";
-			// console.log( `the sticky nav` );
 			nav.classList.add("sticky-nav");
 		} else {
-			// nav.style.position = "block";
-			// console.log( `block nav` );
 			nav.classList.remove("sticky-nav");
 		}
 	}
