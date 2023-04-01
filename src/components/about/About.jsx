@@ -5,8 +5,8 @@ import "./about.scss";
 
 function About() {
 	useEffect(() => {
-		sr.reveal(".image", { delay: "100", origin: "left" });
-		sr.reveal(".details", { delay: "150", origin: "right" });
+		sr.reveal(".image", { delay: "100" });
+		sr.reveal(".details", { delay: "150" });
 		// sr.reveal(".dp", { delay: "100" });
 	}, []);
 	return (
