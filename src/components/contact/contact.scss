@@ -75,7 +75,8 @@
 
             input,
             textarea {
-                width: 350px;
+                width: 100%;
+                max-width: 350px;
                 padding: .7rem 1.5rem;
                 outline: none;
                 border: none;
@@ -114,7 +115,7 @@
 
             input,
             textarea {
-                width: 450px;
+                max-width: 450px;
                 padding: .7rem 1.5rem;
                 outline: none;
                 border: none;
@@ -137,7 +138,7 @@
 
                     input,
                     textarea {
-                        width: 550px;
+                        max-width: 550px;
                         padding: .7rem 1.5rem;
                         outline: none;
                         border: none;
